@@ -1428,3 +1428,40 @@ form.inline {
   border: 0;
   padding: 0;
 }
+
+/* Contact */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.contact p {
+  margin: 0 0 8px;
+}
+.contact-who {
+  font-size: 1.02rem;
+}
+.contact-who a {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.site-footer {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding: 20px 0 8px;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+}
+.site-footer a {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 520px) {
+  .contact .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Logo } from '../ui';
+import { CONTACT, Logo, SiteFooter, contactHref } from '../ui';
 import { go } from '../App';
 import { LOCAL_MODE } from '../socket';
 
@@ -23,6 +23,9 @@ export function Home() {
           <a className="btn ghost small" href="#/teacher">
             Teachers
           </a>
+          <button className="btn ghost small" onClick={() => scrollToId('contact')}>
+            Contact
+          </button>
         </nav>
       </header>
 
@@ -126,6 +129,25 @@ export function Home() {
           </button>
         </div>
       </section>
+
+      <section id="contact" className="card contact">
+        <div>
+          <h2>Questions? Get in touch</h2>
+          <p>
+            Parents, teachers and schools are welcome to reach out with questions, feedback, or to arrange a live walkthrough.
+          </p>
+          <p className="contact-who">
+            <b>{CONTACT.name}</b>
+            <br />
+            <a href={contactHref()}>{CONTACT.email}</a>
+          </p>
+        </div>
+        <a className="btn primary" href={contactHref()}>
+          ✉️ Email {CONTACT.name.split(' ')[0]}
+        </a>
+      </section>
+
+      <SiteFooter />
     </main>
   );
 }

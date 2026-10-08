@@ -197,3 +197,24 @@ export function ErrorNote({ error }: { error: string | null }) {
     </p>
   );
 }
+
+export const CONTACT = {
+  name: 'Vamsi Krishna Gandi',
+  email: 'vamsi8452@gmail.com',
+};
+
+const MAIL_SUBJECT = encodeURIComponent('ThinkCircle: question from a parent');
+
+export function contactHref() {
+  return `mailto:${CONTACT.email}?subject=${MAIL_SUBJECT}`;
+}
+
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <span>
+        Questions about ThinkCircle? Contact <b>{CONTACT.name}</b> at <a href={contactHref()}>{CONTACT.email}</a>
+      </span>
+    </footer>
+  );
+}

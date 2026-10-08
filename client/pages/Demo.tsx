@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { PackSummary } from '../../shared/types';
 import { call, store, tabStore } from '../socket';
-import { ErrorNote, Logo } from '../ui';
+import { ErrorNote, Logo, SiteFooter } from '../ui';
 import { StudentRoom } from './StudentRoom';
 import { TeacherLive } from './TeacherLive';
 
@@ -117,6 +117,7 @@ export function Demo() {
           </button>
           <p className="help small">This demo runs entirely in your browser. Nothing you type is sent anywhere.</p>
         </form>
+        <SiteFooter />
       </main>
     );
   }
@@ -169,6 +170,7 @@ export function Demo() {
           <TeacherLive sessionId={sessionId} embedded />
         </section>
       </div>
+      <SiteFooter />
     </main>
   );
 }
