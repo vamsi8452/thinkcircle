@@ -55,3 +55,7 @@ tests/         acceptance tests, including a 20-session simulation
 ## Tech
 
 TypeScript, React, Vite, Node, Express, Socket.IO, Vitest.
+
+## License
+
+Copyright 2026 Vamsi Krishna Gandi. Licensed under the [Apache License 2.0](LICENSE): you're free to use, modify and share this code, including commercially, as long as you keep the copyright and license notices.
